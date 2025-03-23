@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug TinyWebServer",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${/home/embedfire/C++/WEB/TinyWebServer/server}", // 可执行文件路径
+            "args": [], // 命令行参数
+            "stopAtEntry": false,
+            "cwd": "${/home/embedfire/C++/WEB/TinyWebServer}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build", // 调试前执行的任务（与 tasks.json 中的 label 对应）
+            "miDebuggerPath": "/usr/bin/gdb", // GDB 路径
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true
+            }
+        }
+    ]
+}
